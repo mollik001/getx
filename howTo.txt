@@ -1,0 +1,25 @@
+GetX basic file format:
+
+  -lib
+    -app
+      -data
+      -modules
+        -home(modules can be any single feature of the app)
+          -binding
+            -home_binding
+          -controller
+            -home_controller
+          -view
+            -home_view
+      -routes
+    -main.dart
+
+this is the basic file format when using GetX.
+
+
+Differences between Put and LazyPut:
+
+the primary difference between put and lazyPut is the timing of the dependency instance creation.
+put creates the instance immediately, while lazyPut defers the creation until the first access.
+The choice between them depends on whether you want to eagerly initialize the dependency or 
+delay its creation until it's actually needed.
